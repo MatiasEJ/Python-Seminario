@@ -1,6 +1,7 @@
+import math
 def main():
     def areaCirc(radio):
-        return 3.14*(radio**2)
+        return (math.pi) *(radio**2)
 
     def areaCuad(lado):
         return pow(lado,2)
@@ -12,7 +13,6 @@ def main():
     porcen=(areaNegra(12,4,8)*100)/tot
     areane = areaNegra(12,4,8)
     print("------")
-    print("{}".format(areaCuad(12)))
     print("El area negra es {:.2f} y es un {:.2f}%".format(areane,porcen))
 
 main()
