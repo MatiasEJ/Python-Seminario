@@ -1,7 +1,3 @@
-we = 10
-dos = "wat"
-print(type(we)==type(dos))
-
 def producto(num1,num2):
     arr = list(str(num1))
     print("{:20d}".format(num2))
