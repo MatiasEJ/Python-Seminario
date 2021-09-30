@@ -1,3 +1,4 @@
+# 3.3
 def isFechaValida(dia,mes,año):
     return checkDia(dia) and checkMes(mes) and checkCantDias(dia,año)
     
@@ -13,7 +14,7 @@ def checkMes(mes):
 def isAñoBisiesto(año):
     return (año%4==0 and (año%100 !=0 or año%400==0))
    
-
+# MEPA QUE la fecha 5/12/1903 aparece como correcta pero no lo es
 
 def main():
     dia = int(input("Ingrese el dia: "))

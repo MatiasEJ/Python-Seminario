@@ -3,15 +3,16 @@ def bono(sueldo):
     return (0.15*sueldo) if sueldo > 2000 else (0.2*sueldo)
 
 def plusC(sueldoBase,categoria):
-    plus = None
+    plusc = None
     if( categoria >= 1 and categoria <=3 ):
-        plus = 0.1
+        plusc = 0.1
     elif(categoria >= 4 and categoria <= 6):
-        plus = 0.12
+        plusc = 0.12
     elif(categoria >= 7 and categoria <=9):
-        plus = 0.2
-        
-    return plus*sueldoBase
+        plusc = 0.2
+    else:
+        plusc = 0
+    return plusc*sueldoBase
 
 def plusH(sueldoBase, hijos):
     return (0.05*sueldoBase) if hijos else 0

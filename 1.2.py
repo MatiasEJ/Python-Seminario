@@ -12,8 +12,11 @@ def segundoEj():
 def areaPerim (lado1, lado2):
     print("Perimetro :", int(lado1)*2+int(lado2)*2)
     print("Area :", int(lado1)*int(lado2))
+#1.3
+
+#1.4
    
 def main():
-#     primerEjercicio()
+    primerEjercicio()
     segundoEj()
 main()

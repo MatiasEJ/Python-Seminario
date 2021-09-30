@@ -14,9 +14,9 @@ def minDosArgs(a,b):
 def minTresArgs(a,b,c):
     min = None
     if(minDosArgs(a,b) == a == minDosArgs(a,c) ):
-      min = a
+        min = a
     elif(minDosArgs(a,b) == b == minDosArgs(b,c)):
-      min = b
+        min = b
     else:
         min = c
     return min
@@ -24,11 +24,11 @@ def minTresArgs(a,b,c):
 def maxTresArgs(a,b,c):
     max = None
     if(max2(a,b) == a == max2(a,c) ):
-       max = a
+        max = a
     elif(max2(a,b) == b == max2(b,c)):
-       max = b
+        max = b
     else:
-       max = c
+        max = c
     return max
 
 def medio(a,b,c):
@@ -45,10 +45,10 @@ def medio(a,b,c):
     
     
 def isEqualDist(a,b,c):
-    max = maxTresArgs(a,b,c)
-    min = minTresArgs(a,b,c)
+    maxim = maxTresArgs(a,b,c)
+    minin = minTresArgs(a,b,c)
     med = medio(a,b,c)
-    promedio = (max + min) / 2
+    promedio = (maxim + minin) / 2
     msg="Estan igualmente distanciados!"
     return msg if promedio == med else ("No "+ msg)  
     

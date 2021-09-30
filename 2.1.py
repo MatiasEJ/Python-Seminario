@@ -1,10 +1,5 @@
-num:float = 32.043
-numero2:int = int(num//1)
-print("entera "+ str(numero2) )
-print("decimal "+str(num%1))
-
 def imprimir(dias,horas,minutos,segundos):
-    print("Dias({:.0f}), horas({:.0f}), minutos({:.0f}),segundos({})".format(dias//1,horas//1,minutos//1,int(segundos)))
+    print("Dias({:f}), horas({:f}), minutos({:f}),segundos({})".format(dias,horas,minutos,int(segundos)))
 
 def convertir(tiempo):
     print("convirtiendou...")
@@ -17,4 +12,7 @@ def convertir(tiempo):
     imprimir(dias,horas,minutos,segundos)
 
 
-convertir(93714)
+def main():
+     num1 = int(input("Ingrese tiempo en segundos: "))
+     convertir(num1)
+main()
