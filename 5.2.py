@@ -10,7 +10,7 @@ def esCapicua(num):
 
 def invertir(palabra):
     un = ""
-    for n in range(len(palabra)-1,-1,-1):
+    for n in range(palabra[-1],-1,-1):
         un += palabra[n]
     return un
 
@@ -45,7 +45,7 @@ def esPalindromo(text):
     return text == invertido
     
 def main():
-    texto = "No deseo ese don "
+    texto = "No deseo ese don"
     if esPalindromo(texto):
         print("la frase es palindroma!")
     else:
