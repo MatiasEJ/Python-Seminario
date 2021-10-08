@@ -25,11 +25,3 @@ def listaRandom(ini,fin):
         lista.append(random.randint(ini,fin))
     return lista
 
-def main():
-    lista= listaRandom(-2,2)
-    num = 10
-    print(lista)
-    print(estaEnLista(num,lista))
-    print(estaEnLista3(0,lista))
-
-main()
