@@ -1,6 +1,6 @@
 import unittest
 import random
-from ej_6 import *
+from ej_61 import *
 
 class Test_modulo6(unittest.TestCase):
     def setUp(self) -> None:

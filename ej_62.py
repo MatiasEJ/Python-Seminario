@@ -1,5 +1,5 @@
 import random
-from ej_6 import estaEnLista,listaRandom
+from ej_61 import estaEnLista
 
 def cargarLista() -> list:
     print('Ingrese numeros enteros positivos, para finalizar ingrese 0: ')
@@ -42,10 +42,11 @@ def main():
     # lista = cargarLista()
     # print(lista)
     lista = [-1,-2,5,0,1,1,1,3,3,4,5]
-    print(lista)
+    # print(lista)
+    lista2 = cargarLista()
+    print(lista2)
     # lista = rem_dups(lista)
     # print(lista)
     # rem_negativos(lista)
-    print(cargarLista2(lista))
 
 main()

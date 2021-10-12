@@ -1,4 +1,5 @@
-from ej_6 import listaRandom
+from UTIL import *
+from ej_61 import estaEnLista
 
 def menu():
     print("1. CARGAR CONJUNTOS")
@@ -38,8 +39,8 @@ def cantVeces(num, lista):
             cant += 1
     return cant
 
-def union(a: tuple):
-    return rem_dups(a[0]+a[1])
+def union(conjA,conjB):
+    return list(rem_dups(conjA+conjB))
 
 def interseccion(a: tuple):
     lista = []
@@ -62,13 +63,27 @@ def diferenciaAB(a:tuple):
     print("diferencia AB",lista)
 
 
-def cargar_conjuntos(listaA =[],listaB = []):
-    listaA = rem_dups(listaRandom(0,10))
-    print("lista a, ",listaA)
-    listaB = rem_dups(listaRandom(0,10))
-    print("lista b, ",listaB)
-    return (listaA,listaB)
+def cargar_conjuntos(listaA,listaB):
+    print("CARGA conjunto A")
+    listaA = cargarLista(listaA)
+    print(listaA)
+    print("CARGA conjunto B")
+    listaB = cargarLista(listaB)
+    print(listaB)
 
+def cargarLista(lista:list) -> list:
+    print('Ingrese numeros enteros positivos, para finalizar ingrese 0: ')
+    num = int(input(""))
+    while num != 0:
+        if num < 1: 
+            print("Error,numero no positivo")
+            num = int(input(""))
+        elif estaEnLista(num,lista): 
+            print("Error, numero ya esta en la lista")
+            num = int(input(""))
+        else:
+            lista.append(num)
+            num = int(input(""))
 
 
 def cargarLista2(lista: list) -> list:
@@ -107,11 +122,15 @@ def main():
     # num = int(input("Elija una opcion del menu: "))
     # operaciones(num)
     # print("-------fin-------")
-    tup = cargar_conjuntos([],[])
-    print("union", union(tup))
-    print ("inter ",interseccion(tup))
-    # diferenciaAB(tup)
-    diferenciaSimetrica(tup)
+    clear_screen()
+    conjA = []
+    conjB = []
+    tupl = (conjA,conjB)
+    cargar_conjuntos(conjA,conjB)
+    print("union", union(conjA,conjB))
+    print ("inter ",interseccion(tupl))
+    diferenciaAB(tupl)
+    diferenciaSimetrica(tupl)
 
 
 main()
